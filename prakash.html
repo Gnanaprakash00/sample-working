@@ -6,13 +6,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        
+        .container1 {
+            width: 20rem;
+            height: 20rem;
+            background-color: aquamarine;
+            position: fixed;
+            z-index: 9999;
+            transition: all .15s;
+        }
+    </style>
 </head>
 
 <body>
-    <div class="container1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio aliquam quaerat aliquid beatae cum vel cupiditate corporis pariatur velit incidunt. Eveniet nihil reprehenderit animi voluptatum! Vel ipsam ex perferendis soluta? Tenetur tempora
-        mollitia explicabo sed sequi officia, alias beatae! Placeat vitae qui incidunt, alias voluptate beatae, rerum praesentium eum doloribus consectetur iusto quos aliquam impedit tempore sint similique aspernatur accusamus? Neque nesciunt eligendi
-        rem ab dolore numquam quos accusamus illum animi dignissimos debitis saepe, impedit dolorem quidem excepturi iusto doloremque quasi, at unde officiis vitae! Ducimus cupiditate consequatur quisquam eligendi. Minus earum debitis consectetur perferendis
-        delectus ullam tenetur aspernatur nulla voluptate veniam? Dolorem veritatis esse quos quisquam quasi aut odio a non praesentium accusamus. Tempore soluta culpa perferendis blanditiis consequuntur?</div>
+    <div class="container1" id="container1"></div>
+
+    <script>
+        const container = document.getElementById('container1');
+
+        container.addEventListener('mousemove', (e) => {
+
+
+            container.style.top = `${e.clientX}px`;
+            container.style.bottom = `${e.clientY}px`;
+
+            // console.log(e.clientX);
+            console.log(e.clientX, "this x value");
+            console.log(e.clientY, "this y value");
+        })
+    </script>
+
 </body>
 
 </html>
